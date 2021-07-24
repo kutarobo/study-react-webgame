@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        import { useState, useRef } from React;
+        const GuGuDan = () => {
+            const [First, setFirst] = useState(Math.ceil(Math.random() * 9));
+            const [Second, setSecond] = useState(Math.ceil(Math.random() * 9));
+            const [Value, setValue] = useState('');
+            const [Result, setResult] = useState('');
+            const inputRef = useRef(null)
+
+            const onChangeInput = (e) => {
+                setValue(e.target.value);
+            }
+
+            const onSubmitForm = (e) => {
+                e.preventDefault();
+                if (parseInt(Value) === First * Second) {
+                    this.setState((prevState) => {
+                        setResult('정답: ' + prevState.value);
+                        setFirst(Math.ceil(Math.random() * 9));
+                        setSecond(Math.ceil(Math.random() * 9));
+                        setValue('');
+                    })
+                } else {
+                    setResult('땡');
+                    setValue('');
+                }
+                inputRef.current.focus();
+            }
+
+
+            return (
+                <React.Fragment>
+                    <div>{First} 곱하기 {Second} </div>
+                    <form onSubmit={onSubmitForm}>
+                        <input ref={inputRef} onChange={onChangeInput} value={Value} />
+                        <button>입력</button>
+                    </form>
+                </React.Fragment>
+            )
+        }
+
+    </script>
+    <script type="text/babel">
+        ReactDOM.render(<GuGuDan />, document.querySelector('#root'));
+    </script>
+</body>
+
+</html>
