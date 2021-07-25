@@ -103,3 +103,6 @@ this.state = {
 - componentWillUnmount
   - 부모가 해당 컴포넌트를 제거하기 직전 실행
   - 비동기 요청 정리를 많이한다.
+
+![라이프사이클](https://user-images.githubusercontent.com/38619730/126884414-0d303e00-24cd-437e-87ed-c278cbb81136.png)
+[공식사이트에 링크된 라이프사이클](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
