@@ -43,7 +43,7 @@ const GameBoardStateContext = createContext(initState});
 ```js
 // Action 생성
 // 액션을 지정하여 Reducer에서 서로 다른 타입일 때 다른 로직을 진행시킬 수 있습니다.
-export type Action = { type: "UPDATE"; payload };
+export type Action = { type: "UPDATE", payload };
 ```
 
 ```js
