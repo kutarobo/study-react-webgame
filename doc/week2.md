@@ -138,5 +138,6 @@ const state = useContext(GameBoardStateContext);
   ```
 
 ### immer 라이브러리 사용
+- [참고 블로그](https://kyounghwan01.github.io/blog/React/immer-js/#immer-js%E1%84%85%E1%85%A1%E1%86%AB)
 
 - 불변성을 유지하도록 도와준다.
