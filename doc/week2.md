@@ -111,17 +111,8 @@ import { useContext } from "react";
 const state = useContext(GameBoardStateContext);
 ```
 
-## 기타 팁
-
-- props 넣어두는 데이터는 useCallback으로 감싸주면 좋다.
-
-  - 변경될 데이터를 감지하도록 지정한다.
-
+## 최적화 팁
   ```js
-  useCallback(() => {
-    // 본문
-  }, [감지될데이터]);
-  ```
 
 - 어떤것 때문에 랜더링을 유발하는지 잘 모르겠을때 아래와 같은 방법으로 원인을 찾으면 유용하다.
   ```js
