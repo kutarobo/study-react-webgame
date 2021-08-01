@@ -42,3 +42,8 @@
 
 - 불변성을 유지하도록 도와준다.
 - 적용
+
+### createContext 및 Provider
+
+- 성능적인 이슈가 생길 수있어 매번 새로운 객체가 생기지 않도록 useMemo로 캐싱을 해주면 좋다
+- useContext
