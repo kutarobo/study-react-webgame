@@ -123,7 +123,7 @@ const state = useContext(GameBoardStateContext);
   }, [감지될데이터]);
   ```
 
-- 어떤것 때문에 랜더링을 유발하는지 잘 모르겠을때 아래와 같은 방법으로 원일을 찾으면 유용하다.
+- 어떤것 때문에 랜더링을 유발하는지 잘 모르겠을때 아래와 같은 방법으로 원인을 찾으면 유용하다.
   ```js
   import React, { useEffect, useRef } from "react";
   const ref = UseRef([]);
