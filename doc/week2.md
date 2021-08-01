@@ -4,7 +4,7 @@
 const [state, dispatch] = useReducer(reducer, initialArg, init);
 ```
 
-- useState의 대체 함수입니다. (state, action) => newState의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환한다
+- useState의 대체 함수. (state, action) => newState의 형태로 reducer를 받고 dispatch 메서드와 짝의 형태로 현재 state를 반환한다
   - useState 보다 효율적인 경우
     - 다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우
     - 다음 state가 이전 state에 의존적인 경우
